@@ -1,9 +1,19 @@
 #include <stdio.h>
 #include <assert.h>
 
+int b;
+void printInB(int num) {
+	if (num == 0) {
+		putchar('0');
+		return;
+	}
+	printInB(num/b);
+	putchar(num%b<10?num%b+'0':num%b-10+'A');
+}
+	
 
 int main() {
-	int a,b;
+	int a;
 	int num=0;
 	char c;
 	puts("> Please enter the numbers base:");
@@ -29,6 +39,8 @@ int main() {
 		else num += c-'A'+10;
 	}
 	printf("%d\n", num);
+	printInB(num);
+	putchar('\n');
 
 	return 0;
 }

@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <assert.h>
 
+
 int main() {
-	int a, b;
-	int num = 0;
+	int a,b
+	int num=0;
 	char c;
 	puts("> Please enter the numbers base:");
 	scanf("%d", &a);
@@ -25,7 +26,7 @@ int main() {
 		
 		num*=a;
 		if (c<='9') num += c-'0';
-		else num += c-'A';
+		else num += c-'A'+10;
 	}
 	printf("%d\n", num);
 

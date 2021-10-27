@@ -3,10 +3,8 @@
 
 int b;
 void printInB(int num) {
-	if (num == 0) {
-		putchar('0');
-		return;
-	}
+	if (num == 0) return;
+	
 	printInB(num/b);
 	putchar(num%b<10?num%b+'0':num%b-10+'A');
 }
@@ -39,7 +37,8 @@ int main() {
 		else num += c-'A'+10;
 	}
 	printf("%d\n", num);
-	printInB(num);
+	if (num == 0) putchar('0');
+	else printInB(num);
 	putchar('\n');
 
 	return 0;

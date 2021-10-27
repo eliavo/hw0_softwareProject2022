@@ -3,7 +3,7 @@
 
 
 int main() {
-	int a,b
+	int a,b;
 	int num=0;
 	char c;
 	puts("> Please enter the numbers base:");

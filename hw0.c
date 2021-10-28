@@ -30,13 +30,12 @@ int main() {
 		if (a<=10)
 			assert(c>='0' && c<='9'-10+a && "> Invalid number!");
 		else
-			assert(c>='0' && c<='9' || c>='A' && c<='F'-16+a && "> Invalid number!");
+			assert(((c>='0' && c<='9') || (c>='A' && c<='F'-16+a)) && "> Invalid number!");
 		
 		num*=a;
 		if (c<='9') num += c-'0';
 		else num += c-'A'+10;
 	}
-	printf("%d\n", num);
 	if (num == 0) putchar('0');
 	else printInB(num);
 	putchar('\n');
